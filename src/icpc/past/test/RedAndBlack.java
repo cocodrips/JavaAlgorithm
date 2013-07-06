@@ -5,8 +5,6 @@ import java.io.FileNotFoundException;
 import java.io.InputStream;
 import java.util.Scanner;
 
-import algorithm.recursive.countWay2d;
-
 public class RedAndBlack {
 	static Scanner scanner;
 	static char[][] dyx;
@@ -14,8 +12,6 @@ public class RedAndBlack {
 	static boolean[][] result;
 	static int w,h;
 	
-	
-
 	RedAndBlack() {
 		while (true) {
 			String[] wh = scanner.nextLine().split(" ",0);
@@ -38,10 +34,8 @@ public class RedAndBlack {
 					}
 				}
 			}
-		}
-				
+		}		
 	}
-	
 	
 	static int count(int y, int x){
 		int res = 1;
@@ -55,8 +49,6 @@ public class RedAndBlack {
 		}
 		return res;
 	}
-	
-	
 	
 	public static void main(String[] args) throws FileNotFoundException {
 		InputStream inputStream = new FileInputStream("input/redandblack.txt");

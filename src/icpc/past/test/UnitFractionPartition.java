@@ -4,8 +4,6 @@ import java.io.FileInputStream;
 import java.io.InputStream;
 import java.util.Scanner;
 
-import javax.xml.namespace.QName;
-
 public class UnitFractionPartition {
 	static Scanner scanner;
 	int p,q,a,n;
@@ -19,9 +17,10 @@ public class UnitFractionPartition {
 			n = scanner.nextInt();
 			if((p|q|a|n)==0) break;
 			int ans = calc(0,1,1,0);
-			System.out.println("ans "+ans);
+			System.out.println(ans);
 		}		
 	}
+	
 	int calc(int p2,int q2,int c,int n_count) {
 		int count = 0;
 		if(q * p2  == p*q2){
@@ -37,7 +36,7 @@ public class UnitFractionPartition {
 		}
 		return count;
 	}
-		
+	
 	public static void main(String[] args) throws Exception {
 		InputStream inputStream = new FileInputStream("input/partitiona.txt");
 		scanner = new Scanner(inputStream);
